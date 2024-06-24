@@ -96,7 +96,7 @@ main h1 {
     }
     .boxUnit {
         max-width: 160px;
-        max-height: 200px;
+        max-height: 160px;
     }
 }
 #img {
@@ -159,16 +159,6 @@ aside {
     overflow: hidden;
 
 }
-@media (max-width: 500px) {
-    #conteinerConfig {
-        grid-template-columns: repeat(1, 1fr);  
-        grid-template-rows: repeat(3, 1fr);
-        height: 50vh;
-        grid-row-gap: 30px;
-        height: 50vh;
-        padding-top: 20px;
-    }
-}
 #conteinerConfig:hover {
     overflow: initial;
 }
@@ -184,6 +174,14 @@ aside {
     overflow: hidden;
     
 }
+.boxUnit:nth-child(2){
+    background-image: url(./img.video/Design\ sem\ nome\ \(3\).png);
+    background-size: cover;
+}
+.boxUnit:nth-child(1){
+    background-image: url(./img.video/Dungeon.png);
+    background-size: cover;
+}
 .boxUnit img {
     width: 100%;
     height: 100%;
@@ -191,8 +189,7 @@ aside {
 }
 .boxUnit:hover{
     animation: overflow 1s ease-in-out forwards;
-    width: 72%;
-    height: 72%;
+    padding: 20px;
 
     #box {
         animation: pracima 1s forwards;
@@ -239,14 +236,14 @@ aside {
 
 }
 @keyframes pracima {
-    0%{opacity: 0;}
-    50%{top: 60%}
-    100%{top:90%; opacity: 1;}
+    0%{opacity: 0;right: 0;}
+    50%{top: 60%;right: 0;}
+    100%{top:90%; opacity: 1; right: 0;}
 }
 @keyframes prabaixo {
-    0%{top:110%; opacity: 1;}
-    50%{top: 60%}
-    100%{top:105%; opacity: 0;}
+    0%{top:110%; opacity: 1;right: 0;}
+    50%{top: 60%;right: 0;}
+    100%{top:105%; opacity: 0;right: 0;}
 }
 #box a {
     text-decoration: none;
@@ -268,7 +265,7 @@ aside {
     position: relative;
     box-shadow: 0 0 20px black;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     place-items: center;
 }
 #circles, #circles2,#circles3 {
@@ -295,7 +292,7 @@ aside {
     background-color: rgba(112, 165, 42, 0.432);
 }
 
-#participantes, #participantes1 {
+#participantes{
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -344,5 +341,31 @@ aside {
     }
     #conteinerConfig {
         width: 30%;
+    }
+}
+@media (max-width: 500px) {
+    .boxUnit {
+        width: 100px;
+        height: 100px;
+    }
+    #participantes:nth-child(5){
+        position: relative;
+        left: 50%;
+    }
+    #conteinerConfig {
+        grid-template-columns: repeat(1, 1fr);  
+        grid-template-rows: repeat(2, 1fr);
+        height: 50vh;
+        grid-row-gap: 30px;
+        height: 50vh;
+        padding-top: 20px;
+        width: 50%;
+        top: 35%;
+    }
+}
+@media (min-width: 1500px){
+    .boxUnit {
+        width: 200px;
+        height: 200px;
     }
 }

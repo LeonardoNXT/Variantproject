@@ -26,7 +26,7 @@ seta.addEventListener("click", increase)
 
 
 
-
+let { width } = window.screen
 // PARTE DA PRIMEIRA BOX ----- NAO MEXA
 
 let unitbox = document.getElementById('boxUnitConfig1')
@@ -34,21 +34,44 @@ let unitbox = document.getElementById('boxUnitConfig1')
 function increasebox(){
     unitbox.style.width = "60%"
     unitbox.style.height = "60%"
-    setTimeout(() => {
-        unitbox.style.width = "55%"
-        unitbox.style.height = "55%"
-        unitbox.style.opacity = "0"
-        unitbox.style.boxShadow = "0 0 20px white"
-    },
-    )
-    setTimeout(() => {
-        unitbox.style.opacity = "1"
+    if(width > 1200){
         unitbox.style.width = "60%"
         unitbox.style.height = "60%"
-        unitbox.style.boxShadow = "0 0 0px white"
-
-    },
-    1000)
+        setTimeout(() => {
+            unitbox.style.width = "55%"
+            unitbox.style.height = "55%"
+            unitbox.style.opacity = "0"
+            unitbox.style.boxShadow = "0 0 40px black"
+        },
+        )
+        setTimeout(() => {
+            unitbox.style.opacity = "1"
+            unitbox.style.width = "200px"
+            unitbox.style.height = "200px"
+            unitbox.style.boxShadow = "0 0 0px white"
+    
+        },
+        1000)
+    }
+    else{
+        unitbox2.style.width = "60%"
+        unitbox2.style.height = "60%"
+        setTimeout(() => {
+            unitbox2.style.width = "55%"
+            unitbox2.style.height = "55%"
+            unitbox2.style.opacity = "0"
+            unitbox2.style.boxShadow = "0 0 40px black"
+        },
+        )
+        setTimeout(() => {
+            unitbox2.style.opacity = "1"
+            unitbox2.style.width = "60%"
+            unitbox2.style.height = "60%"
+            unitbox2.style.boxShadow = "0 0 0px white"
+    
+        },
+        1000)
+    }
         let page = document.getElementById('sitepage')
         page.style.animation = "transform2 1s forwards"
         seta.style.top="90%"
@@ -66,27 +89,49 @@ function increasebox(){
 
 
 
-//PARTE DA SEGUNDA BOX ---- NAO MEXA
+//PARTE DA SEGUNDA BOX ---- NAO MEXA\
+
 
 let unitbox2 = document.querySelector('#boxUnitConfig2')
 function increasebox2(){
-    unitbox2.style.width = "60%"
-    unitbox2.style.height = "60%"
-    setTimeout(() => {
-        unitbox2.style.width = "55%"
-        unitbox2.style.height = "55%"
-        unitbox2.style.opacity = "0"
-        unitbox2.style.boxShadow = "0 0 20px white"
-    },
-    )
-    setTimeout(() => {
-        unitbox2.style.opacity = "1"
+    if(width > 1200){
         unitbox2.style.width = "60%"
         unitbox2.style.height = "60%"
-        unitbox2.style.boxShadow = "0 0 0px white"
-
-    },
-    1000)
+        setTimeout(() => {
+            unitbox2.style.width = "55%"
+            unitbox2.style.height = "55%"
+            unitbox2.style.opacity = "0"
+            unitbox2.style.boxShadow = "0 0 40px black"
+        },
+        )
+        setTimeout(() => {
+            unitbox2.style.opacity = "1"
+            unitbox2.style.width = "200px"
+            unitbox2.style.height = "200px"
+            unitbox2.style.boxShadow = "0 0 0px white"
+    
+        },
+        1000)
+    }
+    else{
+        unitbox2.style.width = "60%"
+        unitbox2.style.height = "60%"
+        setTimeout(() => {
+            unitbox2.style.width = "55%"
+            unitbox2.style.height = "55%"
+            unitbox2.style.opacity = "0"
+            unitbox2.style.boxShadow = "0 0 40px black"
+        },
+        )
+        setTimeout(() => {
+            unitbox2.style.opacity = "1"
+            unitbox2.style.width = "60%"
+            unitbox2.style.height = "60%"
+            unitbox2.style.boxShadow = "0 0 0px white"
+    
+        },
+        1000)
+    }
         let page = document.getElementById('sitepage')
         page.style.animation = "transform3 2s forwards ease-in-out"
         seta.style.top="90%"
@@ -149,12 +194,3 @@ let previnir2 = (event) => {
 }
 prevent2.addEventListener('click', previnir2)
 prevent2.addEventListener("click", increasebox2)
-
-
-// maximo de tela
-
-let { width } = window.screen
-
-if(width < 500){
-    
-}

@@ -28,14 +28,15 @@
             flex-grow: 1;
             transition: 1s all;
             padding-bottom: 20px;
+            opacity: 0;
         }
         #all-introduction:hover {
             opacity: 1;
-            #lado-esquerdo{
-                animation: 2s  effectup forwards ease-in-out;
-            }
             #lado-direito {
-                animation: 2s  effectup forwards ease-in-out;
+                animation: 2s effectup forwards ease-in-out;
+            }
+            #lado-esquerdo{
+                animation: 2s effectup forwards ease-in-out;
             }
             #point {
                opacity: 1;
@@ -413,7 +414,7 @@
         <img src="Design sem nome (5).png" alt="">
     </div>
 </div>
-<script>
+<script id="teste1">
     let textoquebra = document.querySelector('#text-introduction')
     window.addEventListener('resize', function() {
     let largura = window.innerWidth
