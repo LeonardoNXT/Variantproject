@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body {
+    font-family:'Montserrat';
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #001f44;
+}
+
+.all-the-site {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    height: 65vh;
+    background-image: url(./img.video/Design\ sem\ nome\ \(1\)\ \(1\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 0 90px black;
+    transition: 1s height;
+    transition: 1s all;
+    
+    
+}
+@keyframes transform2 {
+    from{background-image: url(./img.video/Design\ sem\ nome\ \(1\)\ \(1\).png)}
+    to{background-image: url(img.video/fundotela.png)}
+}
+@keyframes transform3 {
+    from{opacity: 0;}
+    to{background-image: url(img.video/cyberwallpeper.jpg); opacity: 1;}
+}
+/*  HEADER-CONFIG  */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+#link-in-the-header {
+    display: flex;
+    gap: 40px;
+
+}
+#link-in-the-header a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+#title-configurantion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+#title-configurantion p {
+    color: rgb(0, 195, 255);
+    font-weight: 600;
+}
+#title-configurantion a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+}
+
+/*  MAIN-CONFIG  */
+main {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: relative;
+}   
+main h1 {
+    font-size: 80px;
+    position: relative;
+    top: -10%;
+    z-index: 2;
+}
+@media (max-width:500px) {
+    header {
+        justify-content: center;
+    }
+    main h1 {
+        top: -20%;
+        font-size: 34px;
+    }
+    #link-in-the-header {
+        display: none;
+    }
+    .boxUnit {
+        max-width: 160px;
+        max-height: 200px;
+    }
+}
+#img {
+    height: 50px; 
+    animation: 1s arrowdownup infinite forwards;
+    position: absolute;
+    top: 55%;
+    z-index: 3;
+    top: 60%;
+
+}
+main span {
+    animation: 1s coloremode infinite;
+}
+@keyframes coloremode {
+    0% {
+
+    }
+    50% {
+        color: #00d9ff;
+    }
+    100% {
+
+    }
+}
+@keyframes arrowdownup {
+    0% {
+
+    }
+    50% {
+        margin-top: 15px;
+    }
+    100% {
+
+    }
+}
+/*  ASIDE-CONFIG  */
+aside {
+    height: 100vh;
+    background: rgb(96,72,72);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, #00152e36 100%);
+    overflow: hidden;
+}
+
+#conteinerConfig {
+    display: none;
+    width: 45%;
+    height: 30vh;
+    background-color:#0e0e0e8a ;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top:  40%;
+    border-radius: 20px;
+    box-shadow: 10px 0 40px black;
+    opacity: 0;
+    transition: all 2s;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    animation: bordermodifie 5s infinite alternate;
+    overflow: hidden;
+
+}
+@media (max-width: 500px) {
+    #conteinerConfig {
+        grid-template-columns: repeat(1, 1fr);  
+        grid-template-rows: repeat(3, 1fr);
+        height: 50vh;
+        grid-row-gap: 30px;
+        height: 50vh;
+        padding-top: 20px;
+    }
+}
+#conteinerConfig:hover {
+    overflow: initial;
+}
+.boxUnit {
+    width: 200px;
+    height:200px ;
+    border-radius: 30px;
+    background-color: rgba(231, 231, 231, 0);
+    box-shadow: 0 0 20px black;
+    transition: 1s all;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    
+}
+.boxUnit img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.boxUnit:hover{
+    animation: overflow 1s ease-in-out forwards;
+    width: 72%;
+    height: 72%;
+
+    #box {
+        animation: pracima 1s forwards;
+    }
+}
+.boxUnit:not(:hover) {
+    overflow: hidden;
+    animation-delay: 2s;
+
+    #box {
+        animation: prabaixo 1s forwards;
+    }
+}
+#box:not(:hover) {
+    animation: prabaixo 1s forwards;
+}
+@keyframes overflow {
+    100% {
+        overflow: initial;
+    }
+    0% {
+        overflow: hidden;
+    }
+}
+@keyframes bordermodifie {
+    0%{border-radius: 0px 20px 50px 40px;}
+    20%{border-radius: 12px 5px 20px 2px;}
+    50%{border-radius: 40px 30px 40px 10px;}
+    80%{border-radius: 50px 10px 30px 40px;}
+}
+#box {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 105%;
+
+    
+
+}
+@keyframes pracima {
+    0%{opacity: 0;}
+    50%{top: 60%}
+    100%{top:90%; opacity: 1;}
+}
+@keyframes prabaixo {
+    0%{top:110%; opacity: 1;}
+    50%{top: 60%}
+    100%{top:105%; opacity: 0;}
+}
+#box a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #003a81;
+}
+#names {
+    margin-top: 40px;
+    margin-left: 40px;
+    color: azure;
+}
+
+#participantes-group {
+    margin-top: 40px;
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 20px black;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+}
+#circles, #circles2,#circles3 {
+    width: 30vb;
+    height: 30vh;
+    background-color: #001f44;
+    border-radius: 50%;
+    position: absolute;
+}
+#circles2 {
+    right: 20px;
+    filter: blur(60px);
+    animation: movecircle 2s infinite forwards;
+}
+#circles {
+    top: 60%;
+    left: 42%;
+    filter: blur(60px);
+    background-color: rgba(165, 42, 42, 0.432);
+}
+#circles3 {
+    left: 0%;
+    filter: blur(60px);
+    background-color: rgba(112, 165, 42, 0.432);
+}
+
+#participantes, #participantes1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s all;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index:  9;
+}
+#participantes:hover {
+    width: 220px;
+    height: 220px;
+}
+#participantes1:hover {
+    width: 220px;
+    height: 220px;
+}
+#img-proper {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#colorName {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#all-introduction {
+    
+}
+#new-section{
+    height: 100vh;
+    width: 100%;
+    background-color:black;
+}
+@media (max-width: 1400px){
+    .boxUnit {
+        width: 150px;
+        height: 150px;
+    }
+    #conteinerConfig {
+        width: 30%;
+    }
+}

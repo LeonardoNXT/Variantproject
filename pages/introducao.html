@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Poppins;
+        }
+        #root-int{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+            overflow: hidden;
+        }
+        #all-introduction {
+            display: flex;
+            flex-direction: row;
+            background-color: rgba(0, 0, 0, 0.329);
+            backdrop-filter: blur(0px);
+            width: 100%;
+            height: 100vh;
+            flex-grow: 1;
+            transition: 1s all;
+            padding-bottom: 20px;
+        }
+        #all-introduction:hover {
+            opacity: 1;
+            #lado-esquerdo{
+                animation: 2s  effectup forwards ease-in-out;
+            }
+            #lado-direito {
+                animation: 2s  effectup forwards ease-in-out;
+            }
+            #point {
+               opacity: 1;
+            }
+            #point2 {
+               opacity: 1;
+            }
+            #point3 {
+               opacity: 1;
+            }
+            
+        }
+        @keyframes opacitiyeffect {
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+        @keyframes effectup {
+            from{margin-top: 200px; opacity: 0;}
+            to{opacity: 1;}
+        }
+        #lado-esquerdo {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #lado-direito {
+            width: 50%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+        }
+        #lado-direito img {
+            border-radius: 50%;
+            animation: alternarcor alternate 0.6s infinite forwards;
+            animation: alternarborder alternate 5s infinite forwards;
+            box-shadow: 0 0 100px  rgb(77, 15, 0);
+        }
+        @keyframes alternarcor {
+            0%{filter: saturate(50%)}
+            30%{ filter: saturate(200%);}
+            50%{}
+            70%{filter: saturate(50%) }
+            100%{filter: saturate(200%);}
+        }
+        @keyframes alternarborder {
+            0% {
+                border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; filter: saturate(50%);
+            }
+            50% {
+                border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; filter: saturate(400%);
+            }
+            100% {
+                border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;filter: saturate(50%);
+            }
+        }
+        #introduction-1 {
+            margin-top: 10vh;
+            font-size: 80px;
+            width: 700px;
+            height: 240px;
+            color: #ffffff;
+        }
+        #text-introduction{
+            font-size: 33px;
+            align-self: start;
+            margin-left: 12vh;
+            color: white;
+            margin-top: 3vh;
+            display: flex;
+            flex-direction: column;
+
+        }
+        #text-introduction::after {
+            background-color: aqua;
+            width: 20px;
+            height: 40px;
+            
+        }
+        #introduction-1::after {
+            content: ' Cybersegurança';
+            color: aqua;
+        }
+        #config-bol {
+            width: 120px;
+            height: 40px;
+            margin-left: 12vh;
+            align-self: start;
+            display: grid;
+            position: relative;
+            place-items: center;
+            margin-top: 30px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        #bol1, #bol2, #bol3 {
+            width: 6px;
+            height: 70%;
+            background-color:aqua ;
+            border-radius: 10px;
+            box-shadow: 0 0 40px aqua;
+
+
+        }
+        #bol1, #bol3 {
+            animation: moveup 1s infinite alternate ease-in-out;
+        }
+        #bol2 {
+            animation: moveup 1s infinite alternate-reverse ease-in-out;
+        }
+        #circles-config-int > * {
+            background-color: rgb(0, 0, 255);
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+            width: 200px;
+            height: 200px;
+        }
+        #circles-int-1 {
+            top: 50vh;
+            right: 90vh;
+            background-color: aquamarine;
+            filter: blur(140px);
+        }
+        #circles-int-2 {
+            top: 80vh;
+            right: 10%;
+            filter: blur(140px);
+            
+        }
+        #circles-int-3 {
+            top:10vh;
+            right: 15%;
+            filter: blur(150px);
+            background-color: rgb(60, 210, 30);
+        }
+        #circles-int-4 {
+            top: 80vh;
+            right: 80%;
+            background-color: aqua;
+            filter: blur(140px);
+        }
+        #circles-int-5 {
+            top: 10vh;
+            right: 140vh;
+            filter: blur(150px);
+            background-color: burlywood;
+        }
+
+        @keyframes moveup {
+            0% {
+                margin-top: 20px;
+            }
+            100% {
+                margin-bottom: 20px;
+            }
+        }
+        #h5-modifie {
+            align-self: start;
+            color: white;
+            font-size: 40px;
+            margin-top: 20px;
+            margin-left: 12vh;
+            color: aqua;
+            
+        }
+        #btn-int-config {
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-left: 12vh;
+            margin-top: 10vh;
+            padding: 15px 35px;
+            border-radius: 20px;
+            border: 2px solid aqua;
+            box-shadow: 0 0 20px aqua;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            align-self: start;
+            transition: 1s all;
+            animation: 1s upordown infinite;
+            
+        }
+        #btn-int-config:hover {
+            padding: 18px 38px;
+            background-color: aqua;
+            color: black;
+        }
+
+        #point {
+            align-self: start;
+            color: aqua;
+            font-size: 70px;
+            position: absolute;
+            top: 71.5%;
+            left: 18%;
+            animation: pulo 1s forwards infinite alternate ease-out ;
+            transition: 4s all;
+            opacity: 0;
+            
+        }
+        #point::after {
+            content: '.';
+            filter: blur(5px);
+            position: absolute;
+            right: 0.9px;
+        }
+        #point2 {
+            align-self: start;
+            color: aqua;
+            font-size: 70px;
+            position: absolute;
+            top: 71.5%;
+            left: 18%; 
+            margin-left: 75px;
+            animation: pulo 1s forwards infinite alternate ease-out ;
+            animation-delay: 0.5s;
+            opacity: 0;
+            transition: 4s all;
+        }
+        #point2::after {
+            content: '.';
+            filter: blur(5px);
+            position: absolute;
+            right: 0.9px;
+        }
+        #point3 {
+            align-self: start;
+            color: aqua;
+            font-size: 70px;
+            position: absolute;
+            top: 71.5%;
+            left: 18%; 
+            margin-left: 35px;
+            animation: pulo 1s forwards infinite alternate ease-out ;
+            animation-delay: 0.3s;
+            transition: 4s all;
+            opacity: 0;
+        }
+        #point3::after {
+            content: '.';
+            filter: blur(5px);
+            position: absolute;
+            right: 0.9px;
+        }
+        #powered {
+            color: white;
+            margin-top: 70px;
+        }
+        #powered span {
+            color: aqua;
+        }
+        @media (max-width: 1400px ) {
+            #lado-direito img{
+                width: 500px;
+            }
+            #introduction-1{
+                font-size: 50px;
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+                margin-right: 5rem;
+                height: 200px;
+                margin-bottom: 10px;
+            }
+            #powered {
+                margin-top: 10px;
+            }
+            #text-introduction{
+                font-size: 29px;
+            }
+            #config-bol{
+                margin-top: 0px;
+            }
+            #point-config > * {
+                display: nome;
+            }
+        }
+        @media (max-width: 460px) {
+            #all-introduction {
+                
+                flex-direction: column-reverse;
+            }
+            #point-config > * {
+                display: none;
+            }
+            #introduction-1 {
+                margin-top: 0;
+                font-size: 30px;
+                width: 253px;
+                height: auto;
+            }
+            #lado-direito img {
+                width: 300px;
+            }
+            #lado-direito {
+              height: 50%;
+              width: 100%;
+              position: relative;
+              flex-grow: 1;
+            }
+            #lado-esquerdo {
+              height:50%;
+              width: 100%;
+            }
+            #text-introduction {
+                font-size: 18px;
+                margin-left: 0vh;
+            }
+            #h5-modifie {
+                font-size: 30px;
+                margin-left: 0;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            #btn-int-config {
+                margin-top: 2rem;
+                margin-left: 0;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+                
+            }
+            #config-bol {
+                margin-left: 34%;
+            }
+            #powered {
+                margin-top: 20px;
+                margin-left: 0px;
+
+            }
+        }
+
+        
+        
+@keyframes pulo {
+    0% {
+
+    }
+    100% {
+        top: calc(71.5% + -20px) ;
+    }
+}
+    </style>
+</head>
+<body id="root-int">
+    <div id="all-introduction">
+        <div id="circles-config-int">
+        <div id="circles-int-1"></div>
+        <div id="circles-int-2"></div>
+        <div id="circles-int-3"></div>
+        <div id="circles-int-4"></div>
+        <div id="circles-int-5"></div>
+    </div>
+    <div id="lado-esquerdo">
+        <h4 id="introduction-1">Introducão a</h4>
+        <div id="config-bol">
+            <div id="bol1"></div>
+            <div id="bol2"></div>
+            <div id="bol3"></div>
+        </div>
+        <p id="text-introduction">Aqui você aprenderá como lidar com ataques e <br> um pouco de como as empresas lidam!</p>
+        <h5 id="h5-modifie">Comece sua jornada!</h5>
+        <a href="https://view.genially.com/660df468f501920015843391/presentation-ciberseguranca" id="btn-int-config">Comece</a>
+        <div id="point-config">
+        <p id="point">.</p>
+        <p id="point2">.</p>
+        <p id="point3">.</p>
+        </div>
+        <p id="powered">Powered by <span>Maria Clara Torres</span></p>
+
+    </div>
+    <div id="lado-direito">
+        <img src="Design sem nome (5).png" alt="">
+    </div>
+</div>
+<script>
+    let textoquebra = document.querySelector('#text-introduction')
+    window.addEventListener('resize', function() {
+    let largura = window.innerWidth
+    if(largura < 412) {
+        textoquebra.innerHTML = "Aqui você aprenderá como lidar com ataques e um pouco de como as empresas lidam!"
+    }
+});
+</script>
+</body>
+</html>

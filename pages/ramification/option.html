@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+        #root {
+            width: 100%;
+            height: max-content;
+            display: grid;
+            place-items: center;
+        }
+        #box-all-conteiner {
+            display: flex;
+            gap: 20px;
+            background-color: rgb(212, 212, 212);
+            padding: 20px 30px;
+            border-radius: 10px;
+        }
+        #box-all-conteiner li {
+            list-style: none;
+            padding: 0 20px 0 20px;
+
+        }
+        #box-all-conteiner a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #a{
+            border-right: 2px solid black;
+        }
+        #c{
+            border-left: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body id="root">
+    <div id="box-all-conteiner">
+        <li id="a">
+            <a href="">Sobre mim</a>             
+        </li>
+        <li id="b">
+            <a href="">Parte</a>       
+        </li>
+        <li id="c">
+            <a href="">Objetivo</a>       
+        </li>
+    </div>
+</body>
+</html>

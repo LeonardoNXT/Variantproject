@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       @media (max-width:500px) {
+            #participantes-group{
+            width: 100%;
+            height: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 200px);
+     }
+        }
+        #participantes-group > * {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <aside id="oquemuda">
+        <h2 id="names">Participantes</h2>
+        <div id="participantes-group">
+            <div id="participantes1">
+                <img id="img-proper" src="CSS/img.video/Captura_de_tela_2024-04-22_140320-removebg (1).png" alt="" srcset="">
+                <a href="index.html/option" id="colorName">Leonardo</a>
+            </div>
+            <div id="participantes"></div>
+            <div id="participantes"></div>
+            <div id="participantes"></div>
+            <div id="participantes"></div>
+            <div id="participantes"></div>
+            <div id="participantes"></div>
+
+
+
+
+            <div id="circles"></div>
+            <div id="circles2"></div>
+            <div id="circles3"></div>
+        </div>
+        <div id="optionSection"></div>
+    </aside>
+    <script>
+        let routes = {
+            "index.html/option": "/pages/ramification/option.html",
+            404 :"/404.html",
+
+        }
+        let imageProper = document.querySelector('#colorName')
+        let optionProper = (event) => {
+            event = event || window.event
+            event.preventDefault()
+            window.history.pushState({},"", event.target.href)
+            handle()
+
+        }
+        let handle = () => {
+            const { pathname } = window.location
+            const route = routes[pathname] || route[404]
+            fetch(route)
+            .then(data => data.text())
+            .then(html => {
+                document.querySelector('#optionSection').innerHTML = html
+            })
+            
+        }
+        imageProper.addEventListener('click', optionProper)
+    </script>
+</body>
+</html>

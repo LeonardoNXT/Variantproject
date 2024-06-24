@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+body{
+    height: 100vh;
+
+}
+#all-page {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    opacity: 0;
+    transition: 1s all;
+}
+#all-page:hover {
+    opacity: 1;
+    overflow: hidden;
+    
+
+    #parte-esquerda{
+        animation: aparecer 2s forwards;
+    }
+    #parte-direita{
+        animation: aparecer 2s forwards;
+    }
+}
+@keyframes aparecer {
+    from{margin-top: 200px;}
+    to{}
+}
+#parte-esquerda {
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#parte-direita{
+    height: 100vh;
+    width: 50%;
+    display: grid;
+    place-items: center;
+}
+#parte-direita img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgb(255, 145, 0);
+
+
+}
+#game {
+    width: max-content;
+    color:rgb(255, 145, 0) ;
+    position: relative;
+    font-size: 85px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20vh;
+    font-family: "Pixelify Sans", sans-serif;
+
+}
+#game::after {
+    content: ' Dangeon';
+    color: rgb(124, 14, 14);
+    display: flex;
+    justify-content: end;
+    
+}
+#paragraf-a  {
+    font-family: "Jersey 10", sans-serif;
+    display: inline;
+    position: absolute;
+    left: 13%;
+    flex-direction: column;
+    justify-content: start;
+    font-weight: 500;
+    font-size: 40px;
+    color: rgb(196, 196, 196);
+    margin: 110px 40px 0 40px;
+}
+#button-cant {
+    margin-top: 50px;
+    position:absolute;
+    top: 70%;
+    padding: 15px 40px;
+    background-color: rgb(255, 187, 0);
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(255, 187, 0);
+    transition: 1s all;
+}
+#button-cant:hover {
+    padding: 20px 45px;
+}
+#paragraf-a::after {
+
+    margin-top: 0px;
+    content: ' WORKSHOP';
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(167, 0, 22);
+    text-decoration: underline;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googlepis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Jersey+10&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section id="all-page">
+    <div id="parte-esquerda">
+        <h1 id="game">The Malware's</h1>
+        <p id="paragraf-a">Conheça agora o jogo feito <br> exclusivamente para a</p>
+        <a href="" id="button-cant">Jogar</a>
+    </div>
+    <div id="parte-direita">
+        <img src="Texto do seu parágrafo (1).png" alt="">
+    </div>
+</section>
+</body>
+</html>
