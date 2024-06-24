@@ -109,8 +109,8 @@ let prevent = document.getElementById('prevent')
      "/cant" : "/pages/cant.html",
      "/introduction" : "/pages/introducao.html",
      404 : "/pages/404.html",
-     "/index.html": "/pages/normal.html",
      "/option": "/pages/ramification/option.html",
+     "/" : "/pages/normal.html"
  }
 
 let previnir = (event) => {
