@@ -77,7 +77,7 @@ function increasebox(){
         seta.style.top="90%"
 
     let conteine2 = document.getElementById('conteinerConfig')
-    conteine2.style.backgroundColor = "#b9b9b98a"
+    conteine2.style.backgroundColor = "#0e0e0e8a"
     let aside = document.querySelector('aside')
     aside.style.background = "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(23,24,55,1) 100%)"
     aside.innerHTML = ""
