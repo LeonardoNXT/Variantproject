@@ -133,6 +133,7 @@ function increasebox2(){
         },
         1000)
     }
+        parteDeBaixo.style.height ="auto"
         let page = document.getElementById('sitepage')
         page.style.animation = "transform3 2s forwards ease-in-out"
         seta.style.top="90%"
