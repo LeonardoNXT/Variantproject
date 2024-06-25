@@ -111,6 +111,9 @@
             color: rgb(0, 0, 0);
             border-radius: 10px;
             transition: 1s all;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
         }
         #site-maria:hover{
             background-color: rgb(0, 119, 255);
@@ -197,6 +200,26 @@
             margin-left: 2rem;
            }
         }
+        @media (max-width: 400px) {
+            #nome-volta p {
+                font-size: 30px;
+            }
+        #game-all-page{
+                height: 144vh;
+            }
+        }
+        @media (max-width: 377px) {
+            #game-all-page{
+                height: 180vh;
+            } 
+        }
+        @media (max-width: 363px) {
+            #nome-volta p {
+                font-size: 20px;
+            }
+
+        }
+
 
     </style>
 </head>
@@ -225,7 +248,7 @@
             <p id="text-info-game">Escape do Malware! Participe do desafio<br> e teste o seu conhecimento sobre Cybersegurança.</p>
             <p id="text-inside-esquerda">Conheça agora o jogo feito <br> exclusivamente para a</p>
             <div id="btn-barra">
-                <button id="site-maria" >Começar</button>
+                <a href="https://view.genially.com/660f47ae89007300140de7bc/interactive-content-escape-do-malware" id="site-maria">Começar</a>
                 <div id="btn-config-game">
                 <div id="barra-final"></div>
                 <div id="barra-final"></div>
