@@ -28,7 +28,7 @@ seta.addEventListener("click", increase)
 
 let { width } = window.screen
 // PARTE DA PRIMEIRA BOX ----- NAO MEXA
-
+let parteDeBaixo = document.querySelector('#oquemuda')
 let unitbox = document.getElementById('boxUnitConfig1')
 
 function increasebox(){
@@ -75,6 +75,7 @@ function increasebox(){
         let page = document.getElementById('sitepage')
         page.style.animation = "transform2 1s forwards"
         seta.style.top="90%"
+        parteDeBaixo.style.height ="auto"
 
     let conteine2 = document.getElementById('conteinerConfig')
     conteine2.style.backgroundColor = "#0e0e0e8a"
